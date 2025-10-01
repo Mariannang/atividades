@@ -7,10 +7,18 @@
 Nome = str(input("Digite seu nome "))
 
 #receber idade
-Idade = float(input("Digite sua idade "))
+try:
+ Idade = int(input("Digite sua idade "))
+except:
+   print("Valor invalido!")
+
 
 #receber peso
-Peso = float(input("DIgite seu peso "))
+try:
+ Peso = int(input("DIgite seu peso "))
+except: 
+print("valor invalido!")
+
 
 #receber altura
 Altura = float(input("DIgite sua altura "))
@@ -35,7 +43,7 @@ if Idade > 20 and Idade < 61:
     classificacao = "baixo peso"
  elif imc >= 22 and imc <= 27:
     elif imc > 27 and imc < 29.99
-classificacao = "sobrepeso"
+ classificacao = "sobrepeso"
 else:
 classificacao = "obeso"
 
