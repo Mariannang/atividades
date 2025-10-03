@@ -4,24 +4,36 @@
 
 #### receber os dados
 #receber o nome do cliente
-Nome = str(input("Digite seu nome "))
+start_programa = True
+recebe_campos = True
+campos = 1
 
+while start_programa:
+   while recebe_campos:
+      match campos:
+         case 1:
+            try:
+               Nome = str(input("Digite seu nome "))
+               except:
+                  print("Campo invalido...")
+         case 2:
 #receber idade
-try:
- Idade = int(input("Digite sua idade "))
-except:
-   print("Valor invalido!")
-
-
+            try:
+               Idade = int(input("Digite sua idade "))
+               except:
+                     print("Valor invalido!")
 #receber peso
-try:
- Peso = int(input("DIgite seu peso "))
-except: 
-print("valor invalido!")
-
-
+         case 3:
+            try:
+               Peso = int(input("DIgite seu peso "))
+               except: 
+               print("valor invalido!")
 #receber altura
-Altura = float(input("DIgite sua altura "))
+         case 4:
+            try:
+               Altura = float(input("DIgite sua altura "))
+               except:
+                  print("valor invalido...")
 
 ###processo de dados
 # calcular IMC
@@ -53,4 +65,4 @@ print("Sua idade e:", Idade)
 print("Seu peso e:", Peso)
 print("sua altura e: ", Altura)
 print("Seu IMC e: ", imc)
-
+else:
